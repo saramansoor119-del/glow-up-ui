@@ -36,10 +36,14 @@ export const Route = createRootRoute({
       { name: "description", content: "Sakura is a modern beauty house crafting petal-soft makeup with clean formulas and botanical pigments." },
       { name: "author", content: "Sakura Beauty" },
       { property: "og:title", content: "Sakura — Quiet luxury makeup, in bloom" },
-      { property: "og:description", content: "Petal-soft lipsticks, weightless foundations, and dreamy blushes crafted in small batches." },
+      { property: "og:description", content: "Sakura is a modern beauty house crafting petal-soft makeup with clean formulas and botanical pigments." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary" },
       { name: "twitter:site", content: "@Lovable" },
+      { name: "twitter:title", content: "Sakura — Quiet luxury makeup, in bloom" },
+      { name: "twitter:description", content: "Sakura is a modern beauty house crafting petal-soft makeup with clean formulas and botanical pigments." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e1de9d4b-fd30-475c-ba5a-ed386ebc6b48/id-preview-066b0033--b0c13f3f-9ac1-457c-a8b4-302cbf228691.lovable.app-1778005815776.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/e1de9d4b-fd30-475c-ba5a-ed386ebc6b48/id-preview-066b0033--b0c13f3f-9ac1-457c-a8b4-302cbf228691.lovable.app-1778005815776.png" },
     ],
     links: [
       {
