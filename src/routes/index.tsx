@@ -213,7 +213,7 @@ function Testimonials() {
                   <Star key={j} className="h-2.5 w-2.5 sm:h-3.5 sm:w-3.5 fill-primary text-primary" />
                 ))}
               </div>
-              <blockquote className="font-serif text-sm sm:text-lg md:text-xl leading-snug">"{r.quote}"</blockquote>
+              <blockquote className="font-serif text-sm sm:text-lg md:text-xl leading-snug">&quot;{r.quote}&quot;</blockquote>
               <figcaption className="mt-4 sm:mt-6 text-[9px] sm:text-xs uppercase tracking-[0.2em] text-muted-foreground">
                 {r.name} · {r.loc}
               </figcaption>
