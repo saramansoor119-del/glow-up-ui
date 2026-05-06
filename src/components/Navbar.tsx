@@ -3,6 +3,7 @@ import { Link } from "@tanstack/react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, ShoppingBag, ChevronDown } from "lucide-react";
 import { ThemeToggle } from "./ThemeToggle";
+import { useCart } from "@/store/cart";
 
 const links = [
   { to: "/", label: "Home" },
@@ -16,6 +17,8 @@ const shopCategories = ["Lips", "Face", "Eyes", "Cheeks"] as const;
 export function Navbar() {
   const [open, setOpen] = useState(false);
   const [shopOpen, setShopOpen] = useState(false);
+  const cartCount = useCart((s) => s.items.reduce((a, i) => a + i.qty, 0));
+  const openCart = useCart((s) => s.setOpen);
 
   return (
     <header className="sticky top-0 z-50 backdrop-blur-xl bg-background/70 border-b border-border/60">
@@ -87,12 +90,15 @@ export function Navbar() {
           <ThemeToggle />
           <button
             aria-label="Bag"
+            onClick={() => openCart(true)}
             className="relative h-8 w-8 sm:h-9 sm:w-9 rounded-full border border-border bg-card/60 flex items-center justify-center hover:bg-secondary transition-colors"
           >
             <ShoppingBag className="h-3.5 w-3.5 sm:h-4 sm:w-4" />
-            <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-primary-foreground text-[9px] sm:text-[10px] flex items-center justify-center font-medium">
-              2
-            </span>
+            {cartCount > 0 && (
+              <span className="absolute -top-1 -right-1 h-4 w-4 rounded-full bg-primary text-primary-foreground text-[9px] sm:text-[10px] flex items-center justify-center font-medium">
+                {cartCount}
+              </span>
+            )}
           </button>
           <button
             onClick={() => setOpen((o) => !o)}
