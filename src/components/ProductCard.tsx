@@ -1,8 +1,10 @@
 import { motion } from "framer-motion";
 import { Plus } from "lucide-react";
 import type { Product } from "@/data/products";
+import { useCart } from "@/store/cart";
 
 export function ProductCard({ product, index = 0 }: { product: Product; index?: number }) {
+  const add = useCart((s) => s.add);
   return (
     <motion.article
       initial={{ opacity: 0, y: 24 }}
@@ -29,6 +31,7 @@ export function ProductCard({ product, index = 0 }: { product: Product; index?: 
         )}
         <button
           aria-label="Add to bag"
+          onClick={() => add(product)}
           className="absolute bottom-3 right-3 h-10 w-10 rounded-full bg-foreground text-background flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-300"
         >
           <Plus className="h-4 w-4" />
