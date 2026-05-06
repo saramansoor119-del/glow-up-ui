@@ -2,6 +2,7 @@ import { Outlet, Link, createRootRoute, HeadContent, Scripts, useRouterState } f
 import { AnimatePresence, motion } from "framer-motion";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
+import { CartDrawer } from "@/components/CartDrawer";
 
 import appCss from "../styles.css?url";
 
@@ -90,6 +91,7 @@ function RootComponent() {
         </AnimatePresence>
       </main>
       <Footer />
+      <CartDrawer />
     </div>
   );
 }
