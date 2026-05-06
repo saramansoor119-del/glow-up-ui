@@ -22,7 +22,7 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-10 h-14 sm:h-16 flex items-center justify-between">
         <Link to="/" className="flex items-center gap-2">
           <span className="font-serif text-lg sm:text-2xl tracking-tight">
-            Sakura<span className="text-primary">.</span>
+            Sara Beauty Studio<span className="text-primary">.</span>
           </span>
         </Link>
 
